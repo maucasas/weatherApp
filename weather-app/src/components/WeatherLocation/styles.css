@@ -1,0 +1,19 @@
+.locationCont{
+    text-align: left;
+    width: 380px;
+    height: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: rgb(83, 71, 71);
+    font-size: 30px;
+}
+
+
+.weatherLocationCont{
+    text-align: left;
+    font-family: 'Roboto',sans-serif;    
+}
+
+.buttomUpload{
+    padding-left:30px;
+}
