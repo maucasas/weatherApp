@@ -5,6 +5,7 @@ import './styles.css';
 import { PropTypes } from 'prop-types';
 
 const WeatherData = ({data}) => {
+    console.log(data)
     const { temperature, weatherState, humidity, wind} = data;
     return (      
     <div className="weatherData">     

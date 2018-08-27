@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import WeatherLocation from './components/WeatherLocation';
+import { WeatherLocationList } from './components/WeatherLocation/weatherList/weatherLocationList';
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 Mauricio Casas
-        <WeatherLocation />         
+        <WeatherLocationList />         
       </div>
     );
   }
