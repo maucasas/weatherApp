@@ -12,7 +12,6 @@ const Location = ({city}) => (
         <h4>
             {city}
         </h4>
-
     </div>
 
 );
