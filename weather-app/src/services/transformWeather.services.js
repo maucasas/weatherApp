@@ -10,12 +10,14 @@ const{humidity,temp} = weather_data.main;
 const {speed} = weather_data.wind;
 const weatherState = WINDY;
 const temperature = getConvertTemp(temp);
+debugger
     const data = {
         humidity,
         temperature,
         wind: `${speed} m/s`,
         weatherState
     }
+   
     return (data);
 }
 export default transformWeather;

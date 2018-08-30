@@ -6,8 +6,8 @@ export const WeatherLocationList = () => {
         <div>
             
             <WeatherLocation city={'Bogota,co'} />
-            {/* <WeatherLocation city={'Bogota, co'} />
-            <WeatherLocation city={'Santiago, ch'} /> */}
+            <WeatherLocation city={'Caracas, ve'} />
+            {/* <WeatherLocation city={'Santiago, ch'} /> */}
         </div>
     )
 
