@@ -1,6 +1,6 @@
 import React from 'react';
 import WeatherIcons  from 'react-weathericons';
-import { SUN, ClOUD, RAIN, SNOW, WINDY, ClOUDY} from '../../../constants/weathers';
+import { SUN, ClOUD, RAIN, SNOW, WINDY, ClOUDY, THUNDER, DRIZZLE} from '../../../constants/weathers';
 import { PropTypes } from 'prop-types';
 
 const stateToIconName = weatherState => {
@@ -18,7 +18,10 @@ const stateToIconName = weatherState => {
                     return "windy";
                 case ClOUDY:
                     return "cloudy";
-        
+                case THUNDER:
+                    return "day-thunderstorm";
+                case DRIZZLE: 
+                    return "day-showers";        
             default:
                 return "day-sunny";
             
@@ -33,11 +36,14 @@ const getWeatherIcons = weatherState => {
 
 // funtional component
 const WeatherTemperature = ({ temperature, weatherState }) => {
-     return<div className="weatherTemperatureCont">    
-        {getWeatherIcons(weatherState)}
-        <span className="temperatureText" >{temperature} °C</span>
-        
+     return(
+     <div>
+        <div className="weatherTemperatureCont">    
+            {getWeatherIcons(weatherState)}
+            <span className="temperatureText" >{temperature} °C</span>        
+        </div>
     </div>
+     );
 };
 WeatherTemperature.propTypes = {
     temperature: PropTypes.number.isRequired,

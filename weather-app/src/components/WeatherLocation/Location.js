@@ -7,13 +7,13 @@ const Location = ({city}) => (
 //    debugger;
 // destructuring es poner entre llaves la la constante que va a quedar como propiedad
 //    const {city} = props;
-
+<div>
     <div className="locationCont" >
-        <h4>
+        <h1>
             {city}
-        </h4>
+        </h1>
     </div>
-
+</div>
 );
 Location.proptype = {
     city: PropTypes.string.isRequerid

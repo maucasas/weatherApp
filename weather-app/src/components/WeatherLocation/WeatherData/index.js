@@ -8,10 +8,12 @@ const WeatherData = ({data}) => {
     debugger
     const { humidity, temperature, weatherState, wind} = data;
     return (      
+    <div>    
     <div className="weatherData">     
             <WeatherTemperature temperature={temperature} weatherState={weatherState}/>   
             <WeatherExtraInfo humidity={humidity} wind={wind} />              
     </div> 
+    </div>
 );
 };
 
