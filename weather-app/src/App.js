@@ -3,7 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import { WeatherLocationList } from './components/WeatherLocation/weatherList/weatherLocationList';
 
+
+const cities = [
+  'Buenos aires,ar',
+  'Bogota,co'
+]
 class App extends Component {
+  handleSelectedLocation = city => {
+    console.log(`handleSelectedLocation ${city}`);
+  }
   render() {
     return (
       <div className="App">
@@ -12,7 +20,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 Mauricio Casas
-        <WeatherLocationList />         
+        <WeatherLocationList 
+                        cities={cities}
+                        onSelectedLocation={this.handleSelectedLocation} />         
       </div>
     );
   }

@@ -15,8 +15,9 @@ else  { return ClOUDY}
 }
 
 const transformWeather = weather_data => {
-    const { weather } = weather_data;  
     debugger
+
+    const { weather } = weather_data;  
 const{humidity,temp} = weather_data.main;
 const {speed} = weather_data.wind;
 const weatherState = getWeatherstate(weather);
