@@ -37,12 +37,10 @@ const getWeatherIcons = weatherState => {
 // funtional component
 const WeatherTemperature = ({ temperature, weatherState }) => {
      return(
-     <div>
         <div className="weatherTemperatureCont">    
             {getWeatherIcons(weatherState)}
             <span className="temperatureText" >{temperature} °C</span>        
         </div>
-    </div>
      );
 };
 WeatherTemperature.propTypes = {

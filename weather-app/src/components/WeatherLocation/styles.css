@@ -3,6 +3,7 @@
     padding-left: 20px;
     font-weight: bold;
     color: rgb(83, 71, 71);
+   
 }
 .h1{
     width:100%;
@@ -15,11 +16,32 @@
     text-align: left;
     font-family: 'Roboto',sans-serif;   
     margin: 20px; 
-    width:25%;
+    width:calc(100%- 20px);
     height: 300px;
-
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding:25px;
+    min-width: 430px;
 }
 
 .buttomUpload{
     padding-left:30px;
+}
+
+
+@media (max-width: 48em){
+   .locationList {
+       background: green;
+       max-height: 30vh;
+       overflow: auto;
+       margin-bottom: 20px;
+
+   }
+}
+.forecast-title{
+    color: white;
+    text-align: center;
+    padding: 15px;
+
 }

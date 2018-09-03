@@ -11,7 +11,6 @@ export const WeatherLocationList = ({cities, onSelectedLocation}) => {
         console.log('handleWeatherLocationClick');
         onSelectedLocation(city);
     };
-
     const citiesArray = cities => (
         cities.map(city => (<WeatherLocation 
                                             key={city}
@@ -19,7 +18,7 @@ export const WeatherLocationList = ({cities, onSelectedLocation}) => {
                                             onWeatherLocationClick =  {() =>handleWeatherLocationClick(city)} />))
     )
     return (
-        <div>  
+        <div className="locationList">  
            {citiesArray(cities)}
         </div> 
     )

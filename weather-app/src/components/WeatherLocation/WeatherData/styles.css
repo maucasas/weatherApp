@@ -1,7 +1,7 @@
 .weatherData {
     background:rgba(200,200, 200,50 );
     height: 200px;
-    width: 500px;
+    width: 100%;
     line-height: 150px; 
     /* box shadow son sombras sacadas de https://www.cssmatic.com/es/box-shadow */
     box-shadow: 24px 18px 24px 1px rgba(209,190,209,1); 
@@ -11,7 +11,7 @@
     /* background:yellow; */
     width: 40%;
     display: inline-block;
-    height: 80%;
+    height: 30px;
     padding-left: 20px;
 }
 .weatherExtraInfoCont {
