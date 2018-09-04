@@ -24,7 +24,6 @@ class WeatherLocation extends Component {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
         fetch(url)
             .then(weather => {
-                debugger
                 return weather.json();
             })
             .then(resp => {

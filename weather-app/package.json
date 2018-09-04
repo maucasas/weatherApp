@@ -1,10 +1,12 @@
 {
   "name": "weather-app",
   "version": "0.1.0",
-  "private": true,   "material-ui": "^0.20.2",
+  "private": true,
+  "material-ui": "^0.20.2",
   "dependencies": {
     "@material-ui/core": "^3.0.1",
-    "convert-units": "^2.3.4", 
+    "axios": "^0.18.0",
+    "convert-units": "^2.3.4",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
