@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { PropTypes } from 'prop-types';
-import ForeCastItem from '../ForeCastItem/index'
-import  FectchApiService  from './../../services/fecthApiService';
+import ForeCastItem from '../ForeCastItem/index';
+import datatransForecast from '../../services/transformForecast.service';
+// import  FectchApiService  from './../../services/fecthApiService';
 
 
 const days = [
@@ -18,15 +19,46 @@ const days = [
     humidity: 5,
     wind: "100 kmñlñlñlñlñ",
 };
+
+
+
+    const key="abeed9a1115ece79d0a35fc1d10e4891"; 
+    const url = `https://api.openweathermap.org/data/2.5/forecast`;
+
 export class ForeCastExtended extends Component {
-    constructor ( FectchApiService ){
+    constructor ( ){
         super();
 
-        this.state = {forecastData : null}
+        this.state = {
+            forecastData : null,
+        }
     }
-    renderForeCastDays(){
-        
-        return "render Items";
+
+    componentDidMount(){
+        const urlforecast = `${url}?q=${this.props.city}&appid=${key}`;
+      fetch(urlforecast)      
+            .then(resp=>{ 
+                console.log(resp); return resp.json();})            
+            .then(datatransform=>{
+                console.log(datatransform);
+                debugger
+            const forecast = datatransForecast(datatransform);
+            console.log(forecast);
+            this.setState({forecastData: forecast});
+      })
+      debugger
+      
+    }
+    renderForeCastDays(forecastData){
+        return forecastData.map(forecast=> (
+            <ForeCastItem 
+            key={forecast.hour}
+           weekDay={forecast.weekDay} 
+           hour= {forecast.hour}
+           data={forecast.data}>
+           </ForeCastItem>
+        ))
+     
         // return (days.map(day => (<ForeCastItem  key={day} weekDay = {day} data={data}/>)));
     }
 
@@ -45,7 +77,7 @@ export class ForeCastExtended extends Component {
             <h3 className="forecast-title"> {city} </h3>
             
             {forecastData ?
-                this.renderForeCastDays() : this.renderProgress()}
+                this.renderForeCastDays(forecastData) : this.renderProgress()}
             
             </div>
         );
@@ -54,4 +86,5 @@ export class ForeCastExtended extends Component {
 
 ForeCastExtended.proptypes ={
     city: PropTypes.string.isRequerid,
+    forecastData: PropTypes.object,
 }

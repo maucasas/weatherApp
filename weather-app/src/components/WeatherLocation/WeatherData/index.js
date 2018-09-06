@@ -5,10 +5,7 @@ import './styles.css';
 import { PropTypes } from 'prop-types';
 
 const WeatherData = ({data}) => {
-    debugger
     const { humidity, temperature, weatherState, wind} = data;
-    debugger
-
     return (      
     <div>    
     <div className="weatherData">     
